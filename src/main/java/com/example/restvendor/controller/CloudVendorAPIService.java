@@ -19,4 +19,16 @@ public class CloudVendorAPIService {
         this.cloudVendor = cloudVendor;
         return "Cloud Vendor created Successfully";
     }
+
+    @PutMapping
+    public String updateCloudVendorDetails(@RequestBody CloudVendor cloudVendor){
+        this.cloudVendor = cloudVendor;
+        return "Cloud Vendor updated Successfully";
+    }
+
+    @DeleteMapping("{vendorId}")
+    public String deleteCloudVendorDetails(String vendorId){
+        this.cloudVendor = null;
+        return "Cloud Vendor deleted Successfully";
+    }
 }
